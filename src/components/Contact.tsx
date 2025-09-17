@@ -4,12 +4,9 @@ import { MessageCircle, Instagram, Facebook, Mail, Heart } from "lucide-react";
 
 const Contact = () => {
   const whatsappNumber = "+573168455043";
-  const whatsappMessage = "Hola Yamile! Me interesa conocer más sobre sus zapatos 👠";
+  const whatsappMessage = "Hola Yamile! Me interesa conocer más sobre sus zapatos";
   
-  const openWhatsApp = () => {
-    const url = `https://wa.me/${whatsappNumber.replace('+', '')}?text=${encodeURIComponent(whatsappMessage)}`;
-    window.open(url, '_blank');
-  };
+
 
   const openWhatsAppDetal = () => {
     window.open('https://chat.whatsapp.com/LsVCiUGQvrp3NbbgBENZPB', '_blank');
@@ -20,11 +17,11 @@ const Contact = () => {
   };
 
   const openInstagram = () => {
-    window.open('https://instagram.com/zapatosdebucaramanga', '_blank');
+    window.open('https://instagram.com/zapatosdbucaramanga', '_blank');
   };
 
   const openFacebook = () => {
-    window.open('https://facebook.com/zapatosdebucaramanga', '_blank');
+    window.open('https://facebook.com/zapatosdbucaramanga', '_blank');
   };
 
   const sendEmail = () => {
@@ -60,15 +57,16 @@ const Contact = () => {
                 <p className="text-muted-foreground text-lg mb-6">
                   La forma más rápida de obtener asesoría personalizada de Yamile
                 </p>
-                <Button 
-                  variant="hero" 
-                  size="lg" 
-                  className="text-lg px-8 py-4"
-                  onClick={openWhatsApp}
-                >
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  Escribir por WhatsApp
-                </Button>
+                  <a
+                    href={`https://wa.me/573168455043?text=${encodeURIComponent("Hola Yamile! Me interesa conocer más sobre sus zapatos")}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center text-lg px-8 py-4 rounded-md bg-gradient-hero text-white hover:brightness-110 transition"
+                  >
+                    <MessageCircle className="w-5 h-5 mr-2" />
+                    Escribir por WhatsApp
+                  </a>
+
               </div>
             </CardContent>
           </Card>
@@ -166,9 +164,15 @@ const Contact = () => {
                 Te ayudamos a encontrar el calzado que refleje tu personalidad única.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="hero" onClick={openWhatsApp}>
-                  Consultar Disponibilidad
-                </Button>
+                      <a
+                        href={`https://wa.me/573168455043?text=${encodeURIComponent("Hola Yamile! Me interesa conocer más sobre sus zapatos")}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium rounded-md bg-gradient-hero text-white hover:brightness-110 transition"
+                      >
+                        Consultar Disponibilidad
+                      </a>
+
                 <Button 
                   variant="gold"
                   onClick={() => document.getElementById('ubicacion')?.scrollIntoView({ behavior: 'smooth' })}

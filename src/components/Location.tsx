@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Phone, Navigation } from "lucide-react";
 
 const Location = () => {
-  const address = "Hotel Nuevo Marazul, Bucaramanga, Santander";
+  const address = "Hotel Nuevo Marazul bodega 209, Bucaramanga, Santander";
   const googleMapsUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.3775889159453!2d-73.1242849845931!3d7.119047094881386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e683f4516aae6e7%3A0x2b5c3e6b8c4d3f4c!2sHotel%20Nuevo%20Marazul!5e0!3m2!1ses!2sco!4v1629887654321!5m2!1ses!2sco`;
   
   const openInGoogleMaps = () => {
