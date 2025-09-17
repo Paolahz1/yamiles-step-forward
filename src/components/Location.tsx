@@ -66,8 +66,8 @@ const Location = () => {
                     <h3 className="text-xl font-bold text-foreground mb-2">Horarios</h3>
                     <div className="text-muted-foreground space-y-1">
                       <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
-                      <p>Sábados: 9:00 AM - 5:00 PM</p>
-                      <p>Domingos: 10:00 AM - 3:00 PM</p>
+                      <p>Sábados: 9:00 AM - 1:00 PM</p>
+                      <p>Domingos: No hay servicio</p>
                     </div>
                   </div>
                 </div>
@@ -79,7 +79,7 @@ const Location = () => {
                   <div>
                     <h3 className="text-xl font-bold text-foreground mb-2">Contacto</h3>
                     <p className="text-muted-foreground">
-                      WhatsApp: +57 300 123 4567
+                      WhatsApp: +57 316 845 5043
                     </p>
                   </div>
                 </div>
