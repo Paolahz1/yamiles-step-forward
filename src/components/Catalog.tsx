@@ -24,7 +24,7 @@ const catalogItems: CatalogItem[] = [
     title: "Sandalias",
     description: "Comodidad y estilo para el verano. Diseños frescos y elegantes.",
     image: sandaliasImg,
-    pdfUrl: "https://github.com/Paolahz1/Cat-logo_ZapatosDeBucaramanga/raw/main/sandalias.pdf",
+    pdfUrl: "/pdfs/sandalias.pdf",
     color: "primary"
   },
   {
@@ -32,7 +32,7 @@ const catalogItems: CatalogItem[] = [
     title: "Deportivos",
     description: "Calzado deportivo femenino. Perfecto para tu día a día activo.",
     image: deportivosImg,
-    pdfUrl: "https://github.com/Paolahz1/Cat-logo_ZapatosDeBucaramanga/raw/main/deportivo.pdf",
+    pdfUrl: "/pdfs/deportivo.pdf",
     color: "accent"
   },
   {
@@ -40,7 +40,7 @@ const catalogItems: CatalogItem[] = [
     title: "Yute",
     description: "Alpargatas y plataformas. Estilo casual con materiales naturales.",
     image: yuteImg,
-    pdfUrl: "https://github.com/Paolahz1/Cat-logo_ZapatosDeBucaramanga/raw/main/Yute.pdf",
+    pdfUrl: "/pdfs/Yute.pdf",
     color: "secondary"
   },
   {
@@ -48,7 +48,7 @@ const catalogItems: CatalogItem[] = [
     title: "Mocasines",
     description: "Elegancia clásica y comodidad. Perfectos para el día a día profesional.",
     image: mocasinesImg,
-    pdfUrl: "https://github.com/Paolahz1/Cat-logo_ZapatosDeBucaramanga/raw/main/mocasines.pdf",
+    pdfUrl: "/pdfs/mocasines.pdf",
     color: "accent"
   },
   {
@@ -56,10 +56,11 @@ const catalogItems: CatalogItem[] = [
     title: "Tacones",
     description: "Elegancia y sofisticación. Para ocasiones especiales.",
     image: taconesImg,
-    pdfUrl: "https://github.com/Paolahz1/Cat-logo_ZapatosDeBucaramanga/raw/main/Tacones.pdf",
+    pdfUrl: "/pdfs/Tacones.pdf",
     color: "gold"
   }
 ];
+
 
 const Catalog = () => {
   const handleViewPDF = (pdfUrl: string, title: string) => {
@@ -99,24 +100,23 @@ const Catalog = () => {
                 {/* Hover overlay with buttons */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="space-y-3">
-                    <Button
-                      variant="hero"
-                      size="sm"
-                      onClick={() => handleViewPDF(item.pdfUrl, item.title)}
-                      className="w-full"
-                    >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Ver Catálogo
-                    </Button>
-                    <Button
-                      variant="gold"
-                      size="sm"
-                      onClick={() => handleViewPDF(item.pdfUrl, item.title)}
-                      className="w-full"
-                    >
-                      <Download className="w-4 h-4 mr-2" />
-                      Descargar
-                    </Button>
+                    <a
+  href="/pdfs/sandalias.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium transition-colors rounded-md bg-gradient-hero text-white hover:brightness-110"
+>
+  <ExternalLink className="w-4 h-4 mr-2" />
+  Ver Catálogooooo
+</a>
+<a
+  href={item.pdfUrl}
+  download
+  className="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium transition-colors rounded-md bg-gradient-gold text-white hover:brightness-110"
+>
+  <Download className="w-4 h-4 mr-2" />
+  Descargar
+</a>
                   </div>
                 </div>
               </div>

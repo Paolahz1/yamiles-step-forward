@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import yamilePortrait from "@/assets/yamile-portrait.jpg";
+import yamilePortrait from "@/assets/yamile-portrait.png";
 
 const AboutYamile = () => {
   return (
@@ -12,7 +12,8 @@ const AboutYamile = () => {
               <img 
                 src={yamilePortrait} 
                 alt="Yamile, fundadora de Zapatos de Bucaramanga"
-                className="w-full h-auto object-cover"
+            className="w-full h-[400px] md:h-[500px] object-cover object-top"
+
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
             </div>
