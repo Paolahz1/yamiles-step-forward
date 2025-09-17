@@ -6,6 +6,7 @@ import { ExternalLink, Download } from "lucide-react";
 import sandaliasImg from "@/assets/category-sandalias.jpg";
 import deportivosImg from "@/assets/category-deportivos.jpg";
 import yuteImg from "@/assets/category-yute.jpg";
+import mocasinesImg from "@/assets/category-mocasines.jpg";
 import taconesImg from "@/assets/category-tacones.jpg";
 
 interface CatalogItem {
@@ -23,7 +24,7 @@ const catalogItems: CatalogItem[] = [
     title: "Sandalias",
     description: "Comodidad y estilo para el verano. Diseños frescos y elegantes.",
     image: sandaliasImg,
-    pdfUrl: "https://github.com/tu-usuario/zapatos-bucaramanga/raw/main/catalogs/sandalias.pdf",
+    pdfUrl: "https://github.com/Paolahz1/Cat-logo_ZapatosDeBucaramanga/raw/main/sandalias.pdf",
     color: "primary"
   },
   {
@@ -31,7 +32,7 @@ const catalogItems: CatalogItem[] = [
     title: "Deportivos",
     description: "Calzado deportivo femenino. Perfecto para tu día a día activo.",
     image: deportivosImg,
-    pdfUrl: "https://github.com/tu-usuario/zapatos-bucaramanga/raw/main/catalogs/deportivos.pdf",
+    pdfUrl: "https://github.com/Paolahz1/Cat-logo_ZapatosDeBucaramanga/raw/main/deportivo.pdf",
     color: "accent"
   },
   {
@@ -39,23 +40,30 @@ const catalogItems: CatalogItem[] = [
     title: "Yute",
     description: "Alpargatas y plataformas. Estilo casual con materiales naturales.",
     image: yuteImg,
-    pdfUrl: "https://github.com/tu-usuario/zapatos-bucaramanga/raw/main/catalogs/yute.pdf",
+    pdfUrl: "https://github.com/Paolahz1/Cat-logo_ZapatosDeBucaramanga/raw/main/Yute.pdf",
     color: "secondary"
+  },
+  {
+    id: "mocasines",
+    title: "Mocasines",
+    description: "Elegancia clásica y comodidad. Perfectos para el día a día profesional.",
+    image: mocasinesImg,
+    pdfUrl: "https://github.com/Paolahz1/Cat-logo_ZapatosDeBucaramanga/raw/main/mocasines.pdf",
+    color: "accent"
   },
   {
     id: "tacones",
     title: "Tacones",
     description: "Elegancia y sofisticación. Para ocasiones especiales.",
     image: taconesImg,
-    pdfUrl: "https://github.com/tu-usuario/zapatos-bucaramanga/raw/main/catalogs/tacones.pdf",
+    pdfUrl: "https://github.com/Paolahz1/Cat-logo_ZapatosDeBucaramanga/raw/main/Tacones.pdf",
     color: "gold"
   }
 ];
 
 const Catalog = () => {
   const handleViewPDF = (pdfUrl: string, title: string) => {
-    // For now, we'll show an alert. Replace with actual PDF URLs when available
-    alert(`Próximamente podrás ver el catálogo de ${title}. PDF URL: ${pdfUrl}`);
+    window.open(pdfUrl, '_blank');
   };
 
   return (
@@ -74,7 +82,7 @@ const Catalog = () => {
         </div>
 
         {/* Responsive Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 max-w-7xl mx-auto">
           {catalogItems.map((item) => (
             <Card 
               key={item.id} 

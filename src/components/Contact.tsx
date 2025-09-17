@@ -3,12 +3,20 @@ import { Button } from "@/components/ui/button";
 import { MessageCircle, Instagram, Facebook, Mail, Heart } from "lucide-react";
 
 const Contact = () => {
-  const whatsappNumber = "+573001234567";
+  const whatsappNumber = "+573168455043";
   const whatsappMessage = "Hola Yamile! Me interesa conocer más sobre sus zapatos 👠";
   
   const openWhatsApp = () => {
     const url = `https://wa.me/${whatsappNumber.replace('+', '')}?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(url, '_blank');
+  };
+
+  const openWhatsAppDetal = () => {
+    window.open('https://chat.whatsapp.com/LsVCiUGQvrp3NbbgBENZPB', '_blank');
+  };
+
+  const openWhatsAppMayoreo = () => {
+    window.open('https://chat.whatsapp.com/BvVHM3eGM6s4G5vbU3oIBZ', '_blank');
   };
 
   const openInstagram = () => {
@@ -64,6 +72,39 @@ const Contact = () => {
               </div>
             </CardContent>
           </Card>
+
+          {/* WhatsApp Groups */}
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <Card className="p-6 text-center hover:shadow-soft transition-all duration-300 hover:-translate-y-1">
+              <CardContent className="p-0">
+                <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MessageCircle className="w-8 h-8 text-white" />
+                </div>
+                <h4 className="text-lg font-semibold text-foreground mb-2">Ventas al Detal</h4>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Únete a nuestro grupo de ventas al detal
+                </p>
+                <Button variant="outline" size="sm" onClick={openWhatsAppDetal}>
+                  Unirse al Grupo
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="p-6 text-center hover:shadow-soft transition-all duration-300 hover:-translate-y-1">
+              <CardContent className="p-0">
+                <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MessageCircle className="w-8 h-8 text-white" />
+                </div>
+                <h4 className="text-lg font-semibold text-foreground mb-2">Ventas al Por Mayor</h4>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Accede a precios especiales para mayoristas
+                </p>
+                <Button variant="outline" size="sm" onClick={openWhatsAppMayoreo}>
+                  Unirse al Grupo
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
 
           {/* Social Media Grid */}
           <div className="grid md:grid-cols-3 gap-6 mb-8">
