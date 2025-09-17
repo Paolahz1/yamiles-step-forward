@@ -26,7 +26,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center justify-center">
                 <Phone className="w-4 h-4 mr-2 text-primary-glow" />
-                <span className="text-sm">+57 300 123 4567</span>
+                <span className="text-sm">+57 316 845 5043</span>
               </div>
             </div>
           </div>
@@ -63,7 +63,7 @@ const Footer = () => {
             para las mujeres de Bucaramanga
           </p>
           <p className="text-background/40 text-xs mt-2">
-            © 2024 Zapatos de Bucaramanga. Todos los derechos reservados.
+            © 2025 Zapatos de Bucaramanga. Todos los derechos reservados.
           </p>
         </div>
       </div>
