@@ -101,22 +101,22 @@ const Catalog = () => {
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="space-y-3">
                     <a
-  href="/pdfs/sandalias.pdf"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium transition-colors rounded-md bg-gradient-hero text-white hover:brightness-110"
->
-  <ExternalLink className="w-4 h-4 mr-2" />
-  Ver Catálogooooo
-</a>
-<a
-  href={item.pdfUrl}
-  download
-  className="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium transition-colors rounded-md bg-gradient-gold text-white hover:brightness-110"
->
-  <Download className="w-4 h-4 mr-2" />
-  Descargar
-</a>
+                      href={item.pdfUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium transition-colors rounded-md bg-gradient-hero text-white hover:brightness-110"
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Ver Catálogo
+                    </a>
+                    <a
+                      href={item.pdfUrl}
+                      download
+                      className="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium transition-colors rounded-md bg-gradient-gold text-white hover:brightness-110"
+                    >
+                      <Download className="w-4 h-4 mr-2" />
+                      Descargar
+                    </a>
                   </div>
                 </div>
               </div>
